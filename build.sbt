@@ -19,12 +19,12 @@ lazy val root = (project in file("."))
     },
     name := "async-request-reply",
     libraryDependencies ++= Seq(
+      "com.typesafe.akka" %% "akka-http" % "10.1.8",
       "com.typesafe.akka" %% "akka-stream" % "2.5.21",
       "org.apache.kafka" % "kafka-clients" % "2.1.1",
       "com.typesafe.akka" %% "akka-stream-kafka" % "1.0.1",
       "com.ovoenergy" %% "kafka-serialization-core" % kafkaSerializationV,
-      "com.ovoenergy" %% "kafka-serialization-spray" % kafkaSerializationV,
-      //"com.ovoenergy" %% "kafka-serialization-circe" % kafkaSerializationV,
+      "com.ovoenergy" %% "kafka-serialization-circe" % kafkaSerializationV,
       "io.circe" %% "circe-generic" % "0.11.1",
       scalaTest % Test
     )
